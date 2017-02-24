@@ -13,10 +13,10 @@ var genreSchema=mongoose.Schema({
     }
 });
 
-var Genre=module.exports=mongoose.Model('Genres',genreSchema);
+var Genre=module.exports=mongoose.model('Genres',genreSchema);
 
 // get Genres 
 
-module.exports.getGenres=function(callBack,limit){
+module.exports.getGenres=function(callBack,limit){  
 Genre.find(callBack).limit(limit);
-}
+}   
